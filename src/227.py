@@ -7,7 +7,7 @@ class Solution:
         for i, char in enumerate(s):
             if char.isdigit():
                 num = num * 10 + int(char)
-            if char in "+-*/" or i == len(s) 1:
+            if char in "+-*/" or i == len(s) - 1:
                 if last_sign == '+': stack.append(num)
                 if last_sign == '-': stack.append(-num)
                 if last_sign == '*': stack.append(stack.pop() * num)
